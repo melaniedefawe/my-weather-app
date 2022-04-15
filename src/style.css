@@ -1,0 +1,135 @@
+h1,
+h2,
+h3,
+p,
+div {
+  color: #430f58;
+}
+
+form {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.current-icon {
+  font-size: 48px;
+}
+
+.current-icon:hover,
+.city:hover,
+.temp-forecast:hover,
+.forecast-icon:hover {
+  color: #6643b5;
+  cursor: default;
+}
+
+.searchbar {
+  background: transparent;
+  border: 1px solid #6643b5;
+  width: 100%;
+  height: 100%;
+}
+
+.search-button {
+  color: #430f58;
+  background-color: #d5def5;
+  border: 1px solid #6643b5;
+  border-radius: 20px;
+  padding: 6px 12px;
+  font-size: 20px;
+  transition: 2ms all ease-in-out;
+}
+
+.search-button:hover {
+  cursor: pointer;
+  background-color: #6643b5;
+  border: 1px solid #d5def5;
+  color: #d5def5;
+}
+
+.city {
+  font-size: 38px;
+  margin-bottom: 0px;
+}
+
+.date,
+.rain,
+.wind {
+  font-size: 18px;
+  font-weight: 200;
+}
+
+.date {
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+
+.description {
+  font-size: 20px;
+}
+
+.temperature {
+  font-size: 38px;
+  margin-bottom: 0px;
+  display: inline;
+}
+
+.felt-temperature {
+  font-style: italic;
+  margin-top: 0px;
+  font-size: smaller;
+}
+
+.current-wind,
+.current-rain {
+  font-weight: bolder;
+}
+
+.day-forecast {
+  font-size: 20px;
+}
+
+.day {
+  font-size: 18px;
+  font-weight: 400;
+  padding: 10px;
+}
+
+.temp-forecast {
+  font-size: 14px;
+  padding: 2px 0px;
+}
+
+.forecast-icon {
+  font-size: 20px;
+  padding: 10px 3px;
+}
+
+.min-temp {
+  color: gray;
+  font-weight: lighter;
+}
+
+.box {
+  border: 2px solid #6643b5;
+  padding: 10px;
+  margin-top: 10px;
+  max-width: 600px;
+  background-color: rgb(213, 222, 245, 70%);
+}
+
+.small-box {
+  border: 2px dotted #6643b5;
+  padding: 20px;
+  margin: 15px;
+  text-align: center;
+}
+
+.celsius,
+.fahrenheit,
+.separator {
+  font-size: 18px;
+  font-weight: 200;
+  text-decoration: none;
+  display: inline;
+}
