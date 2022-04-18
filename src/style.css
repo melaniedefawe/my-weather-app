@@ -68,6 +68,10 @@ form {
   font-size: 20px;
 }
 
+.description::first-letter {
+  text-transform: capitalize;
+}
+
 .temperature {
   font-size: 38px;
   margin-bottom: 0px;
