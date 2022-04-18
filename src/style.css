@@ -11,8 +11,11 @@ form {
   margin-bottom: 30px;
 }
 
-.current-icon {
-  font-size: 48px;
+img {
+  margin-bottom: 0px;
+  padding: 0px;
+  max-height: 64px;
+  max-width: 64px;
 }
 
 .current-icon:hover,
@@ -116,7 +119,7 @@ form {
 
 .box {
   border: 2px solid #6643b5;
-  padding: 10px;
+  padding: 15px 10px 5px 15px;
   margin-top: 10px;
   max-width: 600px;
   background-color: rgb(213, 222, 245, 70%);
@@ -126,6 +129,7 @@ form {
   border: 2px dotted #6643b5;
   padding: 20px;
   margin: 15px;
+  padding-top: 7px;
   text-align: center;
 }
 
