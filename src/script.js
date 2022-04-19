@@ -23,29 +23,17 @@ function displayTime() {
   time.innerHTML = `${day}, ${hour}:${minutes}`;
 }
 
-function searchCity(event) {
-  event.preventDefault();
-  let cityInput = document.querySelector("#city-input");
-  let newCity = document.querySelector("#current-city");
-
-  if (cityInput.value) {
-    newCity.innerHTML = `${cityInput.value}`;
-  } else {
-    showCurrentPosition();
-  }
-
+function search(city) {
   let apiKey = "7fbc99e26b128af1fc9815e393cfbb4b";
-  let url = `https://api.openweathermap.org/data/2.5/weather?q=${cityInput.value}&units=metric&appid=${apiKey}`;
+  let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
   axios.get(url).then(showTemp);
 }
 
-let form = document.querySelector("#search-form");
-form.addEventListener("submit", searchCity);
-
-displayTime();
-
-let searchPosition = document.querySelector("#current-position");
-searchPosition.addEventListener("click", showCurrentPosition);
+function searchCity(event) {
+  event.preventDefault();
+  let cityInput = document.querySelector("#city-input");
+  search(cityInput.value);
+}
 
 function showTemp(response) {
   let temp = Math.round(response.data.main.temp);
@@ -85,3 +73,13 @@ function showCurrentPosition(position) {
   let url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`;
   axios.get(url).then(showTemp);
 }
+
+search("Berlin");
+
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", searchCity);
+
+displayTime();
+
+let searchPosition = document.querySelector("#current-position");
+searchPosition.addEventListener("click", showCurrentPosition);
