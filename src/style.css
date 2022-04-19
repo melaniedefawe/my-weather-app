@@ -8,7 +8,7 @@ div {
 
 form {
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 img {
@@ -18,10 +18,11 @@ img {
   max-width: 64px;
 }
 
-.current-icon:hover,
+.temperature:hover,
 .city:hover,
 .temp-forecast:hover,
-.forecast-icon:hover {
+.current-humidity:hover,
+.current-wind:hover {
   color: #6643b5;
   cursor: default;
 }
@@ -53,13 +54,21 @@ img {
 .city {
   font-size: 38px;
   margin-bottom: 0px;
+  margin-top: 25px;
 }
 
 .date,
-.rain,
+.humidity,
 .wind {
   font-size: 18px;
   font-weight: 200;
+}
+
+.city,
+.date,
+.humidity,
+.wind {
+  margin-left: 5px;
 }
 
 .date {
@@ -88,7 +97,7 @@ img {
 }
 
 .current-wind,
-.current-rain {
+.current-humidity {
   font-weight: bolder;
 }
 
