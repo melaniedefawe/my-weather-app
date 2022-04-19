@@ -27,6 +27,16 @@ img {
   cursor: default;
 }
 
+.active {
+  color: #430f58;
+  cursor: default;
+}
+
+.active:hover {
+  color: #430f58;
+  cursor: default;
+}
+
 .searchbar {
   background: transparent;
   border: 1px solid #6643b5;

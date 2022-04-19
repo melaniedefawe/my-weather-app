@@ -36,17 +36,17 @@ function searchCity(event) {
 }
 
 function showTemp(response) {
-  let temp = Math.round(response.data.main.temp);
+  celsiusTemperature = response.data.main.temp;
+  let temp = Math.round(celsiusTemperature);
   let temperature = document.querySelector("#temperature");
   temperature.innerHTML = `${temp}`;
 
   let currentCity = document.querySelector("#current-city");
   currentCity.innerHTML = response.data.name;
 
+  feltTemperature = response.data.main.feels_like;
   let temperatureFelt = document.querySelector("#felt");
-  temperatureFelt.innerHTML = `Feels like ${Math.round(
-    response.data.main.feels_like
-  )}°C`;
+  temperatureFelt.innerHTML = `Feels like ${Math.round(feltTemperature)}°C`;
 
   let description = document.querySelector("#description");
   description.innerHTML = response.data.weather[0].description;
@@ -74,12 +74,47 @@ function showCurrentPosition(position) {
   axios.get(url).then(showTemp);
 }
 
-search("Berlin");
+function displayFahrenheitTemp(event) {
+  event.preventDefault();
+  let fahrenheitTemp = (celsiusTemperature * 9) / 5 + 32;
+  let temperature = document.querySelector("#temperature");
+  temperature.innerHTML = Math.round(fahrenheitTemp);
+
+  let feltFahrenheitTemp = (feltTemperature * 9) / 5 + 32;
+  let felt = document.querySelector("#felt");
+  felt.innerHTML = `Feels like ${Math.round(feltFahrenheitTemp)} °F`;
+
+  celsius.classList.remove("active");
+  fahrenheit.classList.add("active");
+}
+
+function displayCelsiusTemp(event) {
+  event.preventDefault();
+  let temperature = document.querySelector("#temperature");
+  temperature.innerHTML = Math.round(celsiusTemperature);
+
+  let felt = document.querySelector("#felt");
+  felt.innerHTML = `Feels like ${Math.round(feltTemperature)} °C`;
+
+  celsius.classList.add("active");
+  fahrenheit.classList.remove("active");
+}
+
+let celsiusTemperature = null;
+let feltTemperature = null;
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", searchCity);
 
-displayTime();
-
 let searchPosition = document.querySelector("#current-position");
 searchPosition.addEventListener("click", showCurrentPosition);
+
+let fahrenheitLink = document.querySelector("#fahrenheit");
+fahrenheitLink.addEventListener("click", displayFahrenheitTemp);
+
+let celsiusLink = document.querySelector("#celsius");
+celsiusLink.addEventListener("click", displayCelsiusTemp);
+
+search("Berlin");
+
+displayTime();
