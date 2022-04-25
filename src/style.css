@@ -115,20 +115,19 @@ img {
   font-size: 20px;
 }
 
+.forecast {
+  padding: 10px;
+  text-align: center;
+}
+
 .day {
   font-size: 18px;
   font-weight: 400;
-  padding: 10px;
 }
 
 .temp-forecast {
   font-size: 14px;
-  padding: 2px 0px;
-}
-
-.forecast-icon {
-  font-size: 20px;
-  padding: 10px 3px;
+  padding: 0px;
 }
 
 .min-temp {
@@ -138,8 +137,8 @@ img {
 
 .box {
   border: 2px solid #6643b5;
-  padding: 15px 10px 5px 15px;
   margin-top: 10px;
+  padding: 12px 10px 5px 10px;
   max-width: 600px;
   background-color: rgb(213, 222, 245, 70%);
 }
