@@ -65,7 +65,7 @@ function displayForecast(response) {
             forecastDay.temp.max
           )}° | <span class="min-temp">${Math.round(
           forecastDay.temp.min
-        )}°</span></div>
+        )}°C</span></div>
         </div>`;
     }
   });
@@ -100,6 +100,13 @@ function showTemp(response) {
 
   let humidity = document.querySelector("#humidity");
   humidity.innerHTML = `${response.data.main.humidity}%`;
+
+  let rain = document.querySelector("#rain");
+  if (response.data.rain) {
+    rain.innerHTML = `${response.data.rain["1h"]} mm (last hour)`;
+  } else {
+    rain.innerHTML = `0 mm`;
+  }
 
   let icon = document.querySelector("#icon");
   icon.setAttribute(

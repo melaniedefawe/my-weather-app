@@ -22,7 +22,8 @@ img {
 .city:hover,
 .temp-forecast:hover,
 .current-humidity:hover,
-.current-wind:hover {
+.current-wind:hover,
+.current-rain:hover {
   color: #6643b5;
   cursor: default;
 }
@@ -69,7 +70,8 @@ img {
 
 .date,
 .humidity,
-.wind {
+.wind,
+.rain {
   font-size: 18px;
   font-weight: 200;
 }
@@ -77,7 +79,8 @@ img {
 .city,
 .date,
 .humidity,
-.wind {
+.wind,
+.rain {
   margin-left: 5px;
 }
 
@@ -107,7 +110,8 @@ img {
 }
 
 .current-wind,
-.current-humidity {
+.current-humidity,
+.current-rain {
   font-weight: bolder;
 }
 
