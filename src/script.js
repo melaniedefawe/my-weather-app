@@ -135,7 +135,7 @@ function displayFahrenheitTemp(event) {
 
   let feltFahrenheitTemp = (feltTemperature * 9) / 5 + 32;
   let felt = document.querySelector("#felt");
-  felt.innerHTML = `Feels like ${Math.round(feltFahrenheitTemp)} °F`;
+  felt.innerHTML = `Feels like ${Math.round(feltFahrenheitTemp)}°F`;
 
   celsius.classList.remove("active");
   fahrenheit.classList.add("active");
@@ -147,7 +147,7 @@ function displayCelsiusTemp(event) {
   temperature.innerHTML = Math.round(celsiusTemperature);
 
   let felt = document.querySelector("#felt");
-  felt.innerHTML = `Feels like ${Math.round(feltTemperature)} °C`;
+  felt.innerHTML = `Feels like ${Math.round(feltTemperature)}°C`;
 
   celsius.classList.add("active");
   fahrenheit.classList.remove("active");
